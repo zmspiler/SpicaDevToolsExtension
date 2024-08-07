@@ -1,12 +1,6 @@
-<h1>Popup</h1>
-<p>
-  You can easily send messages from the popup to the content page with the
-  provided Tab ID! (tabId=<strong>{{ tabId }}</strong
-  >)
-</p>
-
-<button (click)="onClick()">Click me to test</button>
-
-<p>
-  <strong>{{ message() }}</strong>
-</p>
+<div class="container p-8">
+  <h1 class="text-2xl font-bold uppercase tracking-wider">Track tasks</h1>
+  <a (click)="openSettings()">
+    <button>Open settings</button>
+  </a>
+</div>

@@ -9,6 +9,11 @@ import { TAB_ID } from "src/app/app.config";
   styleUrls: ["popup.component.scss"],
 })
 export class PopupComponent {
+  openSettings() {
+    chrome.tabs.create({
+      url: "index.html",
+    });
+  }
   message = signal("");
 
   constructor(@Inject(TAB_ID) readonly tabId: number) {}
@@ -18,7 +23,7 @@ export class PopupComponent {
       this.message.set(
         chrome.runtime.lastError
           ? "The current page is protected by the browser, goto: https://www.google.nl and try again."
-          : msg,
+          : msg
       );
     });
   }

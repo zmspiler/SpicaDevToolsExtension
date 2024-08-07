@@ -7,11 +7,6 @@ export const routes: Routes = [
       import("./modules/popup/popup.routes").then((c) => c.routes),
   },
   {
-    path: "tab",
-    loadChildren: () =>
-      import("./modules/tab/tab.routes").then((c) => c.routes),
-  },
-  {
     path: "options",
     loadChildren: () =>
       import("./modules/options/options.routes").then((c) => c.routes),
@@ -20,5 +15,9 @@ export const routes: Routes = [
     path: "side-panel",
     loadChildren: () =>
       import("./modules/side-panel/side-panel.routes").then((c) => c.routes),
+  },
+  {
+    path: "**",
+    redirectTo: "options",
   },
 ];

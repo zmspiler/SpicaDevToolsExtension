@@ -1,20 +1,18 @@
 {
   "manifest_version": 3,
-  "name": "Angular Chrome Extension",
-  "short_name": "Angular Chrome Extension",
+  "name": "Spica DevTools",
+  "short_name": "Spica DevTools",
   "version": "1.0.0",
-  "description": "Angular Chrome Extension scaffold project",
+  "description": "",
   "permissions": ["tabs", "sidePanel"],
   "action": {
     "default_popup": "index.html?#/popup",
-    "default_title": "Angular Chrome Extension"
+    "default_title": "Spica DevTools",
+    "default_icon": "assets/spica-logo.png"
   },
   "options_page": "index.html?#/options",
   "side_panel": {
     "default_path": "side_panel.html"
-  },
-  "chrome_url_overrides": {
-    "newtab": "index.html?#/tab"
   },
   "content_scripts": [
     {
